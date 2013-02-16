@@ -1,0 +1,68 @@
+body {
+	height: 100%;
+	width: 100%;
+}
+.header, 
+.nav,
+.left,
+.content,
+.right,
+.footer {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.header {
+	width: 100%;
+	height: 15%;
+}
+.nav {
+	width: 100%;
+	height: 5%;
+	clear: both;
+}
+.content {
+	width: 100%;
+	height: 65%;
+}
+.footer {
+	width: 100%;
+	height: 15%;
+}
+#greeting {
+	font-style: italic;
+}
+
+/*ACCORDION*/
+.container {
+    display:block;
+    width: 500px;
+    height : auto ;
+    margin: 0 auto;
+} 
+.item {
+    display : block;
+    width : inherit ;
+    height : 40px;
+    line-height : 40px;
+    background : #555 ;
+    border: 1px solid #000 ;
+    cursor: pointer;
+    color: #fff;
+}
+.item-data {
+    display : none ; 
+    width : inherit ;
+    height : auto ;
+    border: 1px solid #ccc;
+}
+.active {
+    background : #eee ;
+    color : #000 ;
+}
+.item-data div {
+    margin: 30px;
+}
