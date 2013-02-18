@@ -2,13 +2,8 @@
 
 error_reporting(E_ALL ^ E_NOTICE);
 define('INCLUDE_CHECK',true);
-
 session_name('tzLogin');
-// Starting the session
-
 session_set_cookie_params(2*7*24*60*60);
-// Making the cookie live for 2 weeks
-
 session_start();
 
 if($_SESSION['id'] && !isset($_COOKIE['tzRemember']) && !$_SESSION['rememberMe'])

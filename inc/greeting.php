@@ -7,6 +7,6 @@ function greeting(){
 		return "Afternoon";
 	}elseif(date("H") > 17){
 		return "Evening";
-	};
+	}
 }
 ?>

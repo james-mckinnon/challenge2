@@ -1,13 +1,12 @@
 <?php
-$pageTitle = "Timmy's Tools FAQ Page";
-$pageName = "index";
-include("inc/greeting.php");
-include("dbconn/conn.php");
+$pageTitle = "FAQ Home Page";
 include("inc/header_inc.php");
 ?>
 
 <div class="content">
 	<div class='container'>
+
+		<?php $data = db_query("SELECT * FROM questions")->fetchAll(PDO::FETCH_ASSOC); ?>
 
 		<?php foreach ($data as $key=>$value): ?>
 			<div class='item'>

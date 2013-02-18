@@ -1,14 +1,8 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE);
-session_name('tzLogin');
-session_set_cookie_params(2*7*24*60*60);
-session_start();
-
-$pageTitle = "Timmy's Tools - Add FAQ";
-include("../inc/greeting.php");
-include("../dbconn/conn.php");
+$pageTitle = "Add FAQ";
 include("../inc/header_inc.php");
-?> 
+?>
+
 <?php if($_SESSION['id']){ ?>
 
   <div class='content'>
@@ -26,12 +20,6 @@ include("../inc/header_inc.php");
 
     </div>
   </div>
-
-?>
-
-
-
-
 
 <?php }else{ ?>
   <div class='content'>

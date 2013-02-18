@@ -1,9 +1,9 @@
 <div class="footer">
-	<p>TEST</p>
+	<p>This is a footer</p>
 </div>
 
 <script type="text/javascript">
-$(document).ready(function(e){
+$(document).ready(function(){
     $('.item').click(function (e){
         if($(this).next('.item-data').css('display') != 'block'){
             $('.active').slideUp('fast').removeClass('active');

@@ -1,9 +1,12 @@
 <?php
 
+error_reporting(E_ALL ^ E_NOTICE);
+session_name('tzLogin');
+session_set_cookie_params(2*7*24*60*60);
+session_start();
+
 require '../dbconn/conn.php';
 
-$delVal = $_POST['delete'];
+db_query("DELETE FROM questions WHERE id = :value", array(':value' => $_POST['delete']));
 
-$count = db_query("DELETE FROM questions WHERE id = '$delVal'");
-
-?>
+header("Location: ./admin.php");

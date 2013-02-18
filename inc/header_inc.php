@@ -1,12 +1,21 @@
 <?php
-include (dirname(__FILE__) . '/login.php');
+
+error_reporting(E_ALL ^ E_NOTICE);
+session_name('tzLogin');
+session_set_cookie_params(2*7*24*60*60);
+session_start();
+
+include_once (dirname(__FILE__) . '/page_con.php');
+include_once (dirname(__FILE__) . '/login.php');
+include_once (dirname(__FILE__) . '/greeting.php');
+include_once (dirname(__FILE__) . '/../dbconn/conn.php');
 ?>
 
 <!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Timmy's Tools FAQ Page</title>
+	<title><?php echo $company . $pageTitle; ?></title>
 	<link type="text/css" rel="stylesheet" href="/challenge2/css/normalize.css">
 	<link type="text/css" rel="stylesheet" href="/challenge2/css/main.css">
 	<link type="text/css" rel="stylesheet" href="/challenge2/css/slide.css">
@@ -98,5 +107,9 @@ include (dirname(__FILE__) . '/login.php');
 		<h1><?php echo $pageTitle; ?></h1>
 	</div>
 	<div class="nav">
-		<p id="greeting">Good <?php echo greeting() . $greeting; ?>, The date today is <?php echo date('l jS \of F Y'); ?>
+		<?php if($page == "admin"){ ?>
+			<p id="greeting">Good <?php echo greeting() . $greeting; ?>, Would you like to <a href="./add.php">Add a Page?</a></p>
+		<?php }else{ ?>
+			<p id="greeting">Good <?php echo greeting() . $greeting; ?>, The date today is <?php echo date('l jS \of F Y'); ?></p>
+		<?php } ?>
 	</div>
