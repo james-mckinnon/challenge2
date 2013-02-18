@@ -1,9 +1,10 @@
 <?php
 
 $config = array(
-	'DB_NAME' => 'challenge2'/*Name of Database*/,
-	'DB_USERNAME' => 'root'/*Database Username*/,
-	'DB_PASSWORD' => ''/*Database Password*/
+	'HOST' => '' /*Name of Host*/,
+	'DB_NAME' => '' /*Name of Database*/,
+	'DB_USERNAME' => '' /*Database Username*/,
+	'DB_PASSWORD' => '' /*Database Password*/
 );
 
 ?>
