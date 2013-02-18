@@ -1,6 +1,7 @@
 <?php
 $pageTitle = "FAQ Home Page";
-include("inc/header_inc.php");
+
+include_once (dirname(__FILE__) . '/inc/header_inc.php');
 ?>
 
 <div class="content">

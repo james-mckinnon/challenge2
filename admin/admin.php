@@ -1,7 +1,7 @@
 <?php
 $pageTitle = "Admin Page";
 $page = "admin";
-include("../inc/header_inc.php");
+include_once (dirname(__FILE__) . '/../inc/header_inc.php');
 ?> 
 <?php if($_SESSION['id']){ ?>
 
@@ -19,10 +19,8 @@ include("../inc/header_inc.php");
                     <input type="submit" value="Del" />
                   </form>
               </td>
-              <td><form action="edit.php" method="post">
+              <td><form action="edit.php" method="get">
                     <input type="hidden" name="edId" value="<?php echo $value['id']; ?>" />
-                    <input type="hidden" name="edQuest" value="<?php echo $value['question']; ?>" />
-                    <input type="hidden" name="edAns" value="<?php echo $value['answer']; ?>" />
                     <input type="submit" value="Edit" />
                   </form>
               </td>

@@ -1,6 +1,11 @@
 <?php
 
-require (dirname(__FILE__) . '/config.php');
+error_reporting(E_ALL ^ E_NOTICE);
+session_name('tzLogin');
+session_set_cookie_params(2*7*24*60*60);
+session_start();
+
+require_once (dirname(__FILE__) . '/config.php');
 
 try{
 	$conn = new PDO("mysql::host=localhost;dbname=" . $config['DB_NAME'], $config['DB_USERNAME'], $config['DB_PASSWORD']);
