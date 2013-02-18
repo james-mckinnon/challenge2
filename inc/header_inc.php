@@ -59,7 +59,7 @@ include_once (dirname(__FILE__) . '/../dbconn/conn.php');
 
 			<div class="left">
 				<h1>Administrator Panel</h1>
-				<a href="/challenge2/admin/admin.php">Go to the Admin Page</a>
+				<a href="../admin/admin.php">Go to the Admin Page</a>
 				<p>- or -</p>
 				<a href="?logoff">Logout</a>
 			</div>
