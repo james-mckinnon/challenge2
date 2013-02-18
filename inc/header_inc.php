@@ -11,11 +11,11 @@ include_once (dirname(__FILE__) . '/../dbconn/conn.php');
 <head>
 	<meta charset="UTF-8">
 	<title><?php echo $company . $pageTitle; ?></title>
-	<link type="text/css" rel="stylesheet" href="/challenge2/css/normalize.css">
-	<link type="text/css" rel="stylesheet" href="/challenge2/css/main.css">
-	<link type="text/css" rel="stylesheet" href="/challenge2/css/slide.css">
-	<script type="text/javascript" src="/challenge2/js/jquery.js"></script>
-	<script type="text/javascript" src="/challenge2/js/slide.js"></script>
+	<link type="text/css" rel="stylesheet" href="../css/normalize.css">
+	<link type="text/css" rel="stylesheet" href="../css/main.css">
+	<link type="text/css" rel="stylesheet" href="../css/slide.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/slide.js"></script>
 </head>
 
 <body>

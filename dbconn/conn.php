@@ -8,7 +8,7 @@ session_start();
 require_once (dirname(__FILE__) . '/config.php');
 
 try{
-	$conn = new PDO("mysql::host=" . $config['HOST'] . ";localhost;dbname=" . $config['DB_NAME'], $config['DB_USERNAME'], $config['DB_PASSWORD']);
+	$conn = new PDO("mysql:host=" . $config['HOST'] . ";localhost;dbname=" . $config['DB_NAME'], $config['DB_USERNAME'], $config['DB_PASSWORD']);
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }catch(PDOException $e){
 	echo "ERROR: " . $e->getMessage();
