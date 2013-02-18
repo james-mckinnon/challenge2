@@ -1,10 +1,5 @@
 <?php
 
-error_reporting(E_ALL ^ E_NOTICE);
-session_name('tzLogin');
-session_set_cookie_params(2*7*24*60*60);
-session_start();
-
 include_once (dirname(__FILE__) . '/page_con.php');
 include_once (dirname(__FILE__) . '/login.php');
 include_once (dirname(__FILE__) . '/greeting.php');
